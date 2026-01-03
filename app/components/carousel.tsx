@@ -1,8 +1,12 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useDynamicCarousel } from "@/lib/useDynamicCarousel";
+import { useRef } from "react";
 
 export const Carousel = ({ items }) => {
-  const { scrollRef, handleScroll } = useDynamicCarousel(items);
+  const scrollRef = useRef(null);
+  
+  const handleScroll = () => {
+    // Scroll handler logic
+  };
 
   return (
     <div
