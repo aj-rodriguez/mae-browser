@@ -20,10 +20,13 @@ export const useDynamicCarousel = (items) => {
     return () => scrollRef.current.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleScroll = (e) => {
-    const items = Array.from(e.target.children);
-    const activeIndex = Math.round(e.target.scrollLeft / items[0].offsetWidth);
-    setActiveItem(activeIndex);
+  const handleScroll = (e: Event) => {
+    const target = e.target as HTMLElement;
+    const items = Array.from(target.children) as HTMLElement[];
+    if (items.length > 0) {
+      const activeIndex = Math.round(target.scrollLeft / items[0].offsetWidth);
+      setActiveItem(activeIndex);
+    }
   };
 
   return {
