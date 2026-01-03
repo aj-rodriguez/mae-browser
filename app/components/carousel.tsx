@@ -5,7 +5,7 @@ export const Carousel = ({ items }) => {
   const { scrollRef, handleScroll } = useDynamicCarousel(items);
 
   return (
-    <div 
+    <div
       ref={scrollRef}
       className="relative w-full overflow-hidden"
       onScroll={handleScroll}
@@ -29,7 +29,11 @@ export const Carousel = ({ items }) => {
                 <div className="text-center">
                   <h3 className="text-xl font-bold mb-2">{item.title}</h3>
                   <p className="text-gray-400">{item.date}</p>
-                  <a href={item.link} className="mt-4 text-blue-400 hover:text-blue-200">
+                  <a
+                    href={item.link}
+                    className="mt-4 text-blue-400 hover:text-blue-200"
+                    aria-label={`View details about ${item.title}`}
+                  >
                     View Details
                   </a>
                 </div>

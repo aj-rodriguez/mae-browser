@@ -1,8 +1,8 @@
 import { Card } from "@/components/Card";
-import { BentoGrid } from "@/components/BentoGrid";
-import { ActivityFeed } from "@/components/ActivityFeed";
-import { Carousel } from "@/components/Carousel";
-import { GitHubButton } from "@/components/GitHubButton";
+import { bento-grid } from "@/components/bento-grid";
+import { activity-feed } from "@/components/activity-feed";
+import { carousel } from "@/components/carousel";
+import { gh-button } from "@/components/gh-button";
 
 export default function Home() {
   const newsletterItems = [
